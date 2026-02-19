@@ -1,20 +1,24 @@
-# electron-to-electrobun
+# migrate
 
-Claude Code plugin to migrate Electron apps to [Electrobun](https://electrobun.dev/).
+Migration skills for moving between frameworks and runtimes.
 
 ## Install
 
 ```
-/plugin install electron-to-electrobun@recrsn-claude-plugins
+/plugin install migrate@recrsn-claude-plugins
 ```
 
-## Usage
+## Skills
+
+### electron-to-electrobun
+
+Migrate an Electron app to [Electrobun](https://electrobun.dev/).
 
 ```
-/electron-to-electrobun:migrate
+/migrate:electron-to-electrobun
 ```
 
-## What it does
+**What it does:**
 
 - **Phase 1 — Compatibility audit**: Scans your Electron app for API usage (IPC, BrowserWindow, dialogs, menus, clipboard, shell, native modules, build config) and produces a compatibility report with effort estimate
 - **Phase 2 — Step-by-step migration**:

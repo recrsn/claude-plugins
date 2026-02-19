@@ -6,7 +6,7 @@ allowed-tools: Bash, Read, Write, Edit, Glob, Grep, Task, WebFetch, WebSearch
 
 # Electron → Electrobun Migration
 
-Two phases: compatibility check, then migration.
+Two phases: compatibility check, then migration. For mechanical transformations (import rewrites, IPC channel renames, API mappings), prefer JS/TS codemods using `jscodeshift` or `ts-morph` over manual edits.
 
 > Many Electrobun APIs are identical to Electron: `BrowserWindow` options (`title`, `titleBarStyle`, `transparent`), methods (`setTitle`, `close`, `focus`, `minimize`/`isMinimized`, `maximize`/`unmaximize`/`isMaximized`, `setFullScreen`/`isFullScreen`, `setAlwaysOnTop`/`isAlwaysOnTop`, `setPosition`, `setSize`), events (`resize`, `focus`), menu props (`role`, `label`, `type`, `enabled`, `checked`, `submenu`), `GlobalShortcut`, `Screen`, `Session`/`Cookies`. Tables below only list differences. Caveat: `getPosition()` → `{x,y}` not `[x,y]`; `getSize()` → `{width,height}` not `[w,h]`.
 
@@ -104,7 +104,7 @@ Native modules: `*.node`, `node-gyp`, `prebuild`, `ffi-napi`, `better-sqlite3`, 
 ### Effort: N schemas, N preloads, N handlers, N events
 ```
 
-STOP. Present report, ask to proceed.
+STOP. Present report. Enter plan mode and draft a migration plan based on the report. Get user approval before proceeding.
 
 ---
 
