@@ -1,5 +1,5 @@
 ---
-name: migrate
+name: electron-to-electrobun
 description: Port an Electron app to Electrobun. Runs a compatibility audit first, then migrates IPC, windows, preload, menus, dialogs, and build config to Electrobun equivalents.
 allowed-tools: Bash, Read, Write, Edit, Glob, Grep, Task, WebFetch, WebSearch
 ---
@@ -86,7 +86,7 @@ Native modules: `*.node`, `node-gyp`, `prebuild`, `ffi-napi`, `better-sqlite3`, 
 
 ### 1.2 Unsupported patterns
 
-`remote` → RPC requests. `webRequest` → limited. No equivalent: `desktopCapturer`, `powerMonitor`, `powerSaveBlocker`, `TouchBar`, `crashReporter`. `systemPreferences` → limited. `nodeIntegration: true` → N/A. `dialog.showSaveDialog` → none yet. `@electron/rebuild` → Bun native modules.
+`remote` → RPC requests. `webRequest` → limited. No equivalent: `desktopCapturer`, `powerMonitor`, `powerSaveBlocker`, `TouchBar`, `crashReporter`, `vibrancy`/`visualEffectState` (NSVisualEffectView), `trafficLightPosition`. `systemPreferences` → limited. `nodeIntegration: true` → N/A. `dialog.showSaveDialog` → none yet. `@electron/rebuild` → Bun native modules.
 
 ### 1.3 Report template
 
@@ -162,6 +162,8 @@ BrowserWindow constructor:
 | `webPreferences.contextIsolation` | N/A (always isolated) |
 | `webPreferences.partition` | `partition` (`persist:` prefix for persistence) |
 | `frame: false` | `styleMask: {Borderless:true, Titled:false}` |
+| `vibrancy` / `visualEffectState` | No equivalent (use CSS `backdrop-filter` + `transparent: true`) |
+| `trafficLightPosition` | No equivalent (system default only) |
 | N/A | `sandbox: true` (disables RPC), `html: "..."`, `rpc` |
 
 `styleMask` (macOS): `Borderless`, `Titled`, `Closable`, `Miniaturizable`, `Resizable`, `UnifiedTitleAndToolbar`, `FullScreen`, `FullSizeContentView`, `UtilityWindow`, `DocModalWindow`, `NonactivatingPanel`, `HUDWindow`. `titleBarStyle` auto-sets `styleMask`.

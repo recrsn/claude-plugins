@@ -1,32 +1,20 @@
-# Claude Code Plugins by recrsn
+# electron-to-electrobun
 
-A collection of Claude Code plugins.
+Claude Code plugin to migrate Electron apps to [Electrobun](https://electrobun.dev/).
 
 ## Install
-
-Add this marketplace to Claude Code:
-
-```
-/plugin marketplace add recrsn/claude-plugins
-```
-
-## Plugins
-
-### electron-to-electrobun
-
-Migrate Electron apps to [Electrobun](https://electrobun.dev/).
 
 ```
 /plugin install electron-to-electrobun@recrsn-plugins
 ```
 
-**Usage:**
+## Usage
 
 ```
 /electron-to-electrobun:migrate
 ```
 
-**What it does:**
+## What it does
 
 - **Phase 1 — Compatibility audit**: Scans your Electron app for API usage (IPC, BrowserWindow, dialogs, menus, clipboard, shell, native modules, build config) and produces a compatibility report with effort estimate
 - **Phase 2 — Step-by-step migration**:
@@ -43,4 +31,3 @@ Migrate Electron apps to [Electrobun](https://electrobun.dev/).
 
 - [Electrobun documentation](https://electrobun.dev/)
 - [Electrobun GitHub](https://github.com/nicholasgasior/electrobun)
-- [Claude Code plugins](https://docs.anthropic.com/en/docs/claude-code)

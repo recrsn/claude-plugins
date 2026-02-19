@@ -1,0 +1,14 @@
+{
+  "name": "recrsn-plugins",
+  "description": "Claude Code plugins by recrsn",
+  "plugins": [
+    {
+      "name": "electron-to-electrobun",
+      "description": "Migrate Electron apps to Electrobun with compatibility audit and step-by-step migration",
+      "version": "1.0.0",
+      "source": "./plugins/electron-to-electrobun",
+      "category": "migration",
+      "author": "recrsn"
+    }
+  ]
+}
