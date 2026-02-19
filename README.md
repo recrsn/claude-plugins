@@ -39,6 +39,21 @@ Migrate Electron apps to [Electrobun](https://electrobun.dev/).
   - Configures `electrobun.config.ts` build setup
   - Type-checks after each step
 
+### code-quality
+
+Code quality tools for the current branch.
+
+```
+/plugin install code-quality@recrsn-plugins
+```
+
+**Usage:**
+
+```
+/code-quality:deslop  # remove noisy additions (comments, boilerplate, debug logs)
+/code-quality:utg     # generate unit tests for changed code
+```
+
 ## Links
 
 - [Electrobun documentation](https://electrobun.dev/)
