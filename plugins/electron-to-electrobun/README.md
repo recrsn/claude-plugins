@@ -5,7 +5,7 @@ Claude Code plugin to migrate Electron apps to [Electrobun](https://electrobun.d
 ## Install
 
 ```
-/plugin install electron-to-electrobun@recrsn-plugins
+/plugin install electron-to-electrobun@recrsn-claude-plugins
 ```
 
 ## Usage

@@ -17,7 +17,7 @@ Add this marketplace to Claude Code:
 Migrate Electron apps to [Electrobun](https://electrobun.dev/).
 
 ```
-/plugin install electron-to-electrobun@recrsn-plugins
+/plugin install electron-to-electrobun@recrsn-claude-plugins
 ```
 
 **Usage:**
@@ -44,7 +44,7 @@ Migrate Electron apps to [Electrobun](https://electrobun.dev/).
 Code quality tools for the current branch.
 
 ```
-/plugin install code-quality@recrsn-plugins
+/plugin install code-quality@recrsn-claude-plugins
 ```
 
 **Usage:**

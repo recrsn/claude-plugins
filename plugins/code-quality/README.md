@@ -5,7 +5,7 @@ Code quality tools for the current branch.
 ## Install
 
 ```
-/plugin install code-quality@recrsn-plugins
+/plugin install code-quality@recrsn-claude-plugins
 ```
 
 ## Skills
