@@ -1,14 +1,25 @@
 {
   "name": "recrsn-plugins",
   "description": "Claude Code plugins by recrsn",
+  "owner": {
+    "name": "recrsn"
+  },
   "plugins": [
     {
-      "name": "electron-to-electrobun",
-      "description": "Migrate Electron apps to Electrobun with compatibility audit and step-by-step migration",
+      "name": "migrate",
+      "description": "Migration skills for moving between frameworks and runtimes",
       "version": "1.0.0",
-      "source": "./plugins/electron-to-electrobun",
+      "source": "./plugins/migrate",
       "category": "migration",
-      "author": "recrsn"
+      "author": { "name": "recrsn" }
+    },
+    {
+      "name": "code-quality",
+      "description": "Code quality tools: remove slop, generate unit tests, refactor for cohesion, and organize files on branch changes",
+      "version": "1.0.0",
+      "source": "./plugins/code-quality",
+      "category": "code quality",
+      "author": { "name": "recrsn" }
     }
   ]
 }
