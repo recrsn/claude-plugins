@@ -1,6 +1,0 @@
-{
-  "name": "code-quality",
-  "description": "Code quality tools: remove slop, generate unit tests, refactor for cohesion, and organize files on branch changes",
-  "version": "1.0.0",
-  "author": { "name": "recrsn" }
-}

@@ -1,48 +1,37 @@
-# Claude Code Plugins by recrsn
+# agent skills by recrsn
 
-A collection of Claude Code plugins.
+A collection of agent skills for Claude Code and 40+ other AI coding tools.
 
 ## Install
 
-Add this marketplace to Claude Code:
-
-```
-/plugin marketplace add recrsn/claude-plugins
+```bash
+npx skills add recrsn/claude-plugins
 ```
 
-## Plugins
+Or install a specific skill:
 
-### [migrate](plugins/migrate/README.md)
-
-Migration skills for moving between frameworks and runtimes.
-
-```
-/plugin install migrate@recrsn-claude-plugins
+```bash
+npx skills add recrsn/claude-plugins --skill deslop
 ```
 
-**Skills:**
+## Skills
 
-```
-/migrate:electron-to-electrobun  # migrate an Electron app to Electrobun
-```
+### deslop
 
-### [code-quality](plugins/code-quality/README.md)
+Remove all unnecessary changes introduced in this branch — noisy comments, defensive boilerplate, debug logging, `any` casts, and commented-out code.
 
-Code quality tools for the current branch.
+### utg
 
-```
-/plugin install code-quality@recrsn-claude-plugins
-```
+Generate unit tests for code changed in this branch.
 
-**Usage:**
+### cohesive
 
-```
-/code-quality:deslop  # remove noisy additions (comments, boilerplate, debug logs)
-/code-quality:utg     # generate unit tests for changed code
-```
+Review code changed in this branch for cohesiveness — single responsibility, misplaced logic, coupling, scattered features — and execute refactors.
 
-## Links
+### organize
 
-- [Electrobun documentation](https://electrobun.dev/)
-- [Electrobun GitHub](https://github.com/nicholasgasior/electrobun)
-- [Claude Code plugins](https://docs.anthropic.com/en/docs/claude-code)
+Split large files changed in this branch into manageable chunks following language best practices — one component per file, ducks pattern, one class per file, etc.
+
+### electron-to-electrobun
+
+Migrate an Electron app to [Electrobun](https://electrobun.dev/). Runs a compatibility audit first, then migrates IPC, windows, preload, menus, dialogs, and build config to Electrobun equivalents.
