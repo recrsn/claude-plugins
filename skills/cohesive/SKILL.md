@@ -15,37 +15,12 @@ maintain or improve cohesion. Then execute refactors to fix any issues found.
 
 ## What to look for
 
-### Single Responsibility violations
-
-- Functions/methods that now handle multiple unrelated concerns after the change
+- Functions/methods that handle multiple unrelated concerns
 - Classes that gained responsibilities outside their original purpose
 - Modules that mix abstraction levels (e.g., business logic interleaved with I/O)
-
-### Misplaced code
-
 - Logic added to a file/module where it doesn't conceptually belong
-- Utility code inlined where it should live in a shared module (only if one already exists)
-- Data transformations happening far from the data's source or consumer
-
-### Coupling introduced by the change
-
-- New dependencies between modules that should be independent
-- Functions that reach deep into other modules' internals
-- Shared mutable state introduced across boundaries
-
-### Scattered related logic
-
-- Related logic for a single feature spread across many files unnecessarily
-- Duplicated logic that should be consolidated
-- Related constants, types, or helpers that belong together but are separated
-
-## How to refactor
-
-- Extract functions/methods when a block handles a distinct sub-task
-- Move code to the module where it conceptually belongs
-- Group related logic together within a file
-- Consolidate duplicated logic into a single location
-- Split files only when they clearly serve multiple unrelated purposes
+- New dependencies between modules that should be independent; functions reaching into other modules' internals; shared mutable state across boundaries
+- Related logic for a single feature scattered unnecessarily; duplicated logic that should be consolidated
 
 ## Rules
 

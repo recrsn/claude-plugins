@@ -10,22 +10,13 @@ in this branch. Run `git fetch origin` to make sure git context is up-to-date.
 Here is the list of files changed in this branch:
 !`git diff --stat origin/main`
 
-**Focus on generating tests for the changed code:**
-
-- Identify the functions/methods/classes that were added or modified
-- Check if the changed code already has sufficient test coverage by looking at existing tests and coverage reports
-- If coverage is low for the changed code, prioritize generating tests for those areas
-- Only generate tests for logic changes, not data structure changes or formatting changes
-- Generate unit tests that cover the new or changed functionality
-- Ensure tests cover edge cases and error handling for the changed code
+- Check existing test coverage for changed code; skip areas already well-covered
+- Only generate tests for logic changes, not data structure or formatting changes
 - Use the project's existing test framework and conventions
 - Run the test suite with coverage after generating tests, and add more tests if coverage for changed code is low
 
 **Testing guidelines:**
 
-1. Tests should be isolated and not depend on external systems
-2. Use mocks/stubs for dependencies as needed
-3. Do not mock logging or telemetry calls
-4. Only test from the public API of modules/classes, do not test
-	 private/internal methods directly
-5. Follow existing test style and conventions in the codebase
+- Tests should be isolated — use mocks/stubs for external dependencies, but do not mock logging or telemetry
+- Only test public API of modules/classes, not private/internal methods
+- Follow existing test style and conventions in the codebase
